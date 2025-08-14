@@ -1,0 +1,78 @@
+:root {
+    --bg: #000000;
+    --fg: #777777;
+    --orange: #d17e25;
+    --light: #999;
+}
+
+@font-face {
+    font-family: Terminus;
+    src: url(fonts/TerminessNerdFontMono-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Terminus, monospace;
+}
+
+header {
+    margin-top: 6em;
+    width: 600px;
+}
+#title {
+    font-size: 5em;
+    font-style: italic;
+    margin-bottom: 1rem;
+    transition: all 100ms;
+}
+#lambda {
+    font-size: 0.9em;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    border: none;
+}
+
+main {
+    font-size: 1.3em;
+    padding: 20px;
+    width: 600px;
+    /* height: 700px; */
+    border: 1px solid var(--fg);
+}
+
+p::before {
+    content: "$ ";
+}
+a {
+    color: var(--light);
+    font-style: italic;
+}
+li {
+    transition: all 0.2ms;
+    line-height: 1.2;
+}
+ul {
+    list-style-position: inside;
+}
+
+a:hover,
+li:has(a:hover) a,
+li:has(a:hover)::marker,
+li:hover,
+li:has(:hover) a,
+li:has(a:hover) span,
+body:has(#title:hover) a,
+header:has(span:hover) #title,
+header:has(#title:hover),
+header:has(#title:hover) span {
+    color: var(--orange);
+}
