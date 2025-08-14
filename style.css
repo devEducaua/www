@@ -16,10 +16,17 @@
     font-family: Terminus, monospace;
 }
 
+@media screen and (min-width: 480px) {
+    header {
+        width: 600px;
+    }
+}
+
 header {
     margin-top: 6em;
     max-width: 600px;
 }
+
 #title {
     font-size: 5em;
     font-style: italic;
