@@ -18,8 +18,13 @@
 
 @media screen and (min-width: 480px) {
     header {
-        width: 600px;
+        min-width: 600px;
     }
+
+    #posts-title {
+        text-align: left;
+    }
+
     main {
         width: 600px;
     }
@@ -88,6 +93,11 @@ li {
     transition: all 0.2ms;
     line-height: 1.2;
 }
+
+li::marker {
+    content: "- ";
+}
+
 ul {
     list-style-position: inside;
 }
