@@ -1,0 +1,5 @@
+- Aprendendo C em 2025
+- Começando na programação funcional
+- Uma breve olhada aos BSDs
+- Conhecendo o Solaris
+- Dependencia as big techs

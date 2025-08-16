@@ -20,6 +20,9 @@
     header {
         width: 600px;
     }
+    main {
+        width: 600px;
+    }
 }
 
 header {
@@ -33,8 +36,18 @@ header {
     margin-bottom: 1rem;
     transition: all 100ms;
 }
+
+#title a {
+    text-decoration: none;
+}
+
 #lambda {
     font-size: 0.9em;
+}
+
+#blog-title {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 body {
@@ -51,13 +64,13 @@ main {
     font-size: 1.3em;
     padding: 20px;
     max-width: 600px;
-    /* height: 700px; */
     border: 1px solid var(--fg);
 }
 
-p::before {
-    content: "$ ";
+b {
+    color: var(--light);
 }
+
 a {
     color: var(--light);
     font-style: italic;
@@ -70,13 +83,34 @@ ul {
     list-style-position: inside;
 }
 
+#blog-list li {
+    list-style-type: none;
+    line-height: 1.5;
+}
+
+#blog-list li a {
+    font-style: normal;
+    text-decoration: none;
+}
+
+#blog-list li a:hover {
+    text-decoration: underline;
+}
+
+#blog-list span {
+    padding-right: 40px;
+}
+
 a:hover,
 li:has(a:hover) a,
 li:has(a:hover)::marker,
 li:hover,
 li:has(:hover) a,
 li:has(a:hover) span,
+main:has(#blog-title:hover) #blog-title,
 body:has(#title:hover) a,
+body:has(#title:hover) #blog-title,
+body:has(#title:hover) b,
 header:has(span:hover) #title,
 header:has(#title:hover),
 header:has(#title:hover) span {
