@@ -1,14 +1,15 @@
 :root {
-    --bg: #fffcf3;
+    --bg: #000000;
     --fg: #777777;
     --orange: #d17e25;
     --light: #999;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #000000;
-    }
+.light {
+    --bg: #fffcf3;
+    --fg: #777777;
+    --orange: #d17e25;
+    --light: #999;
 }
 
 
