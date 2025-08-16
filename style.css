@@ -37,6 +37,7 @@ header {
     transition: all 100ms;
 }
 
+#posts-title a,
 #title a {
     text-decoration: none;
 }
@@ -48,6 +49,14 @@ header {
 #blog-title {
     text-align: center;
     margin-bottom: 20px;
+}
+
+#posts-title {
+    font-style: italic;
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: all 100ms;
 }
 
 body {
@@ -111,6 +120,9 @@ main:has(#blog-title:hover) #blog-title,
 body:has(#title:hover) a,
 body:has(#title:hover) #blog-title,
 body:has(#title:hover) b,
+header:has(span:hover) #posts-title a,
+header:has(#posts-title:hover),
+header:has(#posts-title:hover) span,
 header:has(span:hover) #title,
 header:has(#title:hover),
 header:has(#title:hover) span {
