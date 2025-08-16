@@ -1,13 +1,20 @@
 :root {
-    --bg: #000000;
+    --bg: #fffcf3;
     --fg: #777777;
     --orange: #d17e25;
     --light: #999;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #000000;
+    }
+}
+
+
 @font-face {
     font-family: Terminus;
-    src: url(fonts/TerminessNerdFontMono-Regular.ttf);
+    src: url(../fonts/TerminessNerdFontMono-Regular.ttf);
 }
 
 * {
@@ -21,12 +28,19 @@
         min-width: 600px;
     }
 
-    #posts-title {
-        text-align: left;
-    }
-
     main {
         width: 600px;
+    }
+    #nav {
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #nav {
+        justify-content: center;
     }
 }
 
@@ -35,14 +49,40 @@ header {
     max-width: 600px;
 }
 
+#nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#nav button a {
+    text-decoration: none;
+    color: var(--fg);
+    font-style: normal;
+}
+
+#nav button:hover,
+#nav button a:hover {
+    color: var(--orange);
+}
+
+#nav button {
+    justify-self: flex-end;
+    border: none;
+    background-color: inherit;
+    color: var(--fg);
+    padding: 5px 20px;
+    font-size: 1.2em;
+}
+
 #title {
     font-size: 5em;
     font-style: italic;
     margin-bottom: 1rem;
     transition: all 100ms;
+    text-align: center;
 }
 
-#posts-title a,
 #title a {
     text-decoration: none;
 }
@@ -54,14 +94,6 @@ header {
 #blog-title {
     text-align: center;
     margin-bottom: 20px;
-}
-
-#posts-title {
-    font-style: italic;
-    font-size: 5em;
-    text-align: center;
-    margin-bottom: 1rem;
-    transition: all 100ms;
 }
 
 body {
@@ -89,6 +121,7 @@ a {
     color: var(--light);
     font-style: italic;
 }
+
 li {
     transition: all 0.2ms;
     line-height: 1.2;
@@ -126,13 +159,11 @@ li:has(a:hover)::marker,
 li:hover,
 li:has(:hover) a,
 li:has(a:hover) span,
-main:has(#blog-title:hover) #blog-title,
+body:has(#title:hover) #nav button,
 body:has(#title:hover) a,
 body:has(#title:hover) #blog-title,
 body:has(#title:hover) b,
 header:has(span:hover) #posts-title a,
-header:has(#posts-title:hover),
-header:has(#posts-title:hover) span,
 header:has(span:hover) #title,
 header:has(#title:hover),
 header:has(#title:hover) span {
