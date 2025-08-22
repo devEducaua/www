@@ -86,11 +86,6 @@ main {
     font-size: 0.9em;
 }
 
-#blog-title {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 header {
     display: flex;
     flex-direction: column;
