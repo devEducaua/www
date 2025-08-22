@@ -15,27 +15,74 @@
         }
     </style>
 
-    <header id="nav">
-        <button><a href="index.html">home</a></button>
-        <button><a href="posts.html">posts</a></button>
-        <button><a href="links.html">links</a></button>
-        <button><a href="tutoriais.html">tutorials</a></button>
-        <button><a href="feed.xml">rss</a></button>
-        <button id="theme-toggle">toggle</button>
-    </header>
+    <!--     <button><a href="feed.xml">rss</a></button> -->
+    <!--     <button id="theme-toggle">toggle</button> -->
 
-    <div id="title-box">
+    <header>
         <h1 id="title">
-            <span id = "lambda">󰘧</span> 
+            <span id="lambda">󰘧</span> 
             <a href="index.html">lambda</a>
         </h1>
-    </div>
+        <nav>
+            <button id="theme-toggle">toggle theme</button>
+            <button><a href="feed.xml">rss</a></button>
+        <nav>
+    </header>
 
     <main>
-        <p>este aqui é o meu site pessoal.</p> <br>
-        <p>eu gosto muito de aprender e criar coisas. Muito disso vêm das filosofias <a href="https://wikipedia.org/wiki/KISS_principle" target="_blank">KISS</a> & <a href="https://wikipedia.org/wiki/Do_it_yourself" target="_blank">DIY</a>.</p><br>
-        <p>estudo constantemente ciência da computação, linguística, filosofia, e entre muitos outras coisas também.</p> <br>
-        <p>gosto muito de ensinar tudo que aprendo, no blog prentendo fazer alguns tutoriais.</p> <br>
+        <div id="main-box" class="box">
+            <span class="box-title">lambda</span>
+            <p>este aqui é o meu site pessoal.</p> <br>
+            <p>eu gosto muito de aprender e criar coisas. Muito disso vêm das filosofias <a href="https://wikipedia.org/wiki/KISS_principle" target="_blank">KISS</a> & <a href="https://wikipedia.org/wiki/Do_it_yourself" target="_blank">DIY</a>.</p><br>
+            <p>estudo constantemente ciência da computação, linguística, filosofia, e entre muitos outras coisas também.</p> <br>
+            <p>gosto muito de ensinar tudo que aprendo, no blog prentendo fazer alguns tutoriais.</p> <br>
+        </div>
+
+        <div id="posts-box" class="box">
+            <span class="box-title">coisas que eu escrevo</span>
+            <ul id="blog-list">
+                <li> <span>18/08/2025</span><a href="posts/baixe-suas-musicas.html">baixe suas musicas</a> </li>
+            <li> <span>16/08/2025</span><a href="tutorial/nom-rss-reader.html">nom rss reader</a> </li>
+                <li> <span>15/08/2025</span><a href="posts/dependencia-as-big-techs.html">dependencia as big techs</a> </li>
+            </ul>
+        </div>
+        <div id="links-box" class="box">
+            <span class="box-title">links</span>
+            <p>aqui estão alguns do meus links: </p>
+            <br>
+            <ul>
+                <p>code:</p>
+                <li>
+                    <span>Github:</span><a href="https://github.com/devEducaua" target="_blank">link</a>
+                </li>
+                <li>
+                    <span>Codeberg:</span> <a href="https://codeberg.org/eduardocaua" target="_blank">link</a>
+                </li>
+                <br>
+            </ul>
+
+            <ul>
+                <p>media:</p>
+                <li>
+                    <span>Letterboxd:</span> <a href="https://letterboxd.com/induardo" target="_blank">link</a>
+                </li>
+                <li>
+                    <span>LastFM:</span> <a href="https://last.fm/user/chokito4" target="_blank">link</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="now-box" class="box">
+            <span class="box-title">now</span>
+            <p>coisas que estou fazendo no momento:</p>
+            <ul>
+                <li>lendo: <b>O Estranho Misterioso</b> de Mark Twain</li>
+            </ul>
+        </div>
+        <div id="about-box" class="box">
+            <span class="box-title">coisas sobre mim</span>
+            <p>about me</p>
+        </div>
     </main>
 </body>
 </html>

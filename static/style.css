@@ -3,11 +3,13 @@
     --fg: #777777;
     --orange: #d17e25;
     --light: #999;
+    --sec: #222;
 }
 
 .light {
     --bg: #fffcf3;
     --fg: #777777;
+    --sec: #dddddd;
     --orange: #d17e25;
     --light: #999;
 }
@@ -24,64 +26,55 @@
     font-family: Terminus, monospace;
 }
 
-@media screen and (min-width: 480px) {
-    #title-box {
-        min-width: 600px;
-    }
-
-    main {
-        width: 600px;
-    }
-    #nav {
-        width: 100%;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #nav {
-        justify-content: center;
-    }
-}
-
-#title-box {
-    margin-top: 6em;
-    max-width: 600px;
-}
-
-#nav {
+body {
+    margin-top: 5rem;
+    background-color: var(--bg);
+    color: var(--fg);
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-#nav button a {
-    text-decoration: none;
-    color: var(--fg);
-    font-style: normal;
-}
-
-#nav button:hover,
-#nav button a:hover {
-    color: var(--orange);
-}
-
-#nav button {
-    justify-self: flex-end;
+    align-items: center;
+    /* height: 100vh; */
+    height: 100vh;
+    flex-direction: column;
     border: none;
-    background-color: inherit;
-    color: var(--fg);
-    padding: 5px 20px;
-    font-size: 1.2em;
+}
+
+main {
+    max-width: 90%;
+    margin-bottom: 2rem;
+    display: grid;
+    gap: 30px;
+    grid-template-areas: 
+    "main links"
+    "main posts"
+    "now posts"
+    "about empty"
+    ;
+}
+
+.post-main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 600px;
+    font-size: 1.3em;
+    padding: 20px;
+    border: 1px dashed var(--fg);
+    margin-bottom: 2rem;
+}
+
+.date {
+    font-style: italic;
+    text-align: center;
 }
 
 #title {
-    font-size: 5em;
+    font-size: 6em;
     font-style: italic;
     margin-bottom: 1rem;
     transition: all 100ms;
-    text-align: center;
+    text-align: left;
 }
 
 #title a {
@@ -98,26 +91,88 @@
     margin-bottom: 20px;
 }
 
-body {
-    background-color: var(--bg);
-    color: var(--fg);
+header {
     display: flex;
-    align-items: center;
-    height: 100vh;
     flex-direction: column;
-    border: none;
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
 }
 
-main {
-    font-size: 1.3em;
+header button {
+    background: none;
+    border: none;
+    padding: 5px 20px;
+    font-size: 1.2em;
+    color: var(--fg);
+}
+
+header button a {
+    text-decoration: none;
+    font-style: normal;
+    color: var(--fg);
+}
+
+header button:hover {
+    color: var(--orange);
+}
+
+.box {
+    position: relative;
+    border: 1px dashed var(--fg);
     padding: 20px;
+    font-size: 1.3em;
+}
+
+#links-box {
+    grid-area: links;
+}
+
+#now-box {
+    grid-area: now;
+}
+
+#posts-box {
+    grid-area: posts;
+    min-width: 500px;
+}
+
+#main-box {
+    grid-area: main;
     max-width: 600px;
-    border: 1px solid var(--fg);
-    margin-bottom: 2rem;
+}
+
+#about-box {
+    grid-area: about;
+}
+
+.post-title,
+.box-title {
+    background-color: var(--bg);
+    position: absolute;    
+    top: -0.7em;
+    /* left: 1em; */
+    /* padding: 0 0.5em; */
+}
+
+.post-title {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+code {
+    font-style: italic;
+    font-family: monospace;
+    font-size: 1.2em;
 }
 
 b {
     color: var(--light);
+    font-weight: 500;
 }
 
 a {
@@ -162,13 +217,15 @@ li:has(a:hover)::marker,
 li:hover,
 li:has(:hover) a,
 li:has(a:hover) span,
-body:has(#title:hover) #nav button,
 body:has(#title:hover) a,
 body:has(#title:hover) #blog-title,
 body:has(#title:hover) b,
-#title-box:has(span:hover) #posts-title a,
-#title-box:has(span:hover) #title,
-#title-box:has(#title:hover),
-#title-box:has(#title:hover) span {
+.box:has(.box-title:hover) .box-title,
+header:has(#title:hover),
+header:has(#title:hover) span {
     color: var(--orange);
+}
+
+.box:has(.box-title:hover) {
+    border-color: var(--orange);
 }

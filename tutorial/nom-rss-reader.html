@@ -9,33 +9,28 @@
     <script src="../static/theme.js" defer></script>
 </head>
 <body>
-    <header id="nav">
-        <button><a href="../index.html">home</a></button>
-        <button><a href="../posts.html">posts</a></button>
-        <button><a href="../links.html">links</a></button>
-        <button><a href="../tutoriais.html">tutoriais</a></button>
-        <button><a href="../feed.xml">rss</a></button>
-        <button id="theme-toggle">toggle</button>
+    <header>
+        <h1 id="title">
+            <span id="lambda">󰘧</span> 
+            <a href="../index.html">lambda</a>
+        </h1>
+        <nav>
+            <button id="theme-toggle">dark</button>
+            <button><a href="feed.xml">rss</a></button>
+        <nav>
     </header>
 
-    <div id="title-box">
-        <h1 id="title"><span id = "lambda">󰘧</span> <a href="../index.html">lambda</a></h1>
-    </div>
-
-    <main>
-        <h1 id="blog-title">nom rss reader</h1>
-        <!-- <hr><br> -->
+    <main class="post-main">
+        <span class="post-title">nom rss reader</span>
+        <p class="date">16/08/2025</p>
         <p><a href="wikipedia.org/wiki/rss">rss</a> é uma tecnologia realmente prática e ótima, mas eu nunca me abtuei bem. muito disso se deve ao leitores rss, que não realmente são muito bons.</p>
         <p>deixando de lado meus problemas com os leitores, vão falar sobre o <a href="https://github.com/guyfedwards/nom" target="_blank">nom</a>, um leitor de feeds rss no terminal.</p>
         <p>ele é escrito em go, usando o <a href="https://github.com/charmbracelet/bubbletea" target="_blank">bubbletea</a> para a <a href="https://wikipedia.org/wiki/Text-based_user_interface" target="_blank">TUI</a>, ele usa outro programa que acho fantástico e uso comumente, o <a href="https://github.com/charmbracelet/glow" target="_blank">glow</a>.
-        <br><br>
         <p>indo mais para o lado prático agora, vamos falar sobre como usar o nom.</p>
         <p>para a instalação você pode simplesmente ir as <a href="https://github.com/guyfedwards/nom/releases">releases do github</a>.</p>
 
-        <!-- <p>ele é configurado por um config.yaml, que fica em `~/.config/nom/config.yml`. caso esse arquivo não exista, pode simplesmente cria-lo sem problemas.</p> -->
-        <p>agora, para adicionar os feeds, simplesmente rode: <pre><br>$ nom add https://blog.com/feed nomedoblog</pre></p><br>
+            <p>agora, para adicionar os feeds, simplesmente rode: <br>$<code> nom add https://blog.com/feed nomedoblog</code></p>
         <p>depois basta rodar `nom`, e receber suas noticias, e blog posts direto da linha de comando.</p>
-        <br>
         <p>nom ainda tem mais alguns detalhes como keybindings especiais, e mais detalhes no seu arquivo de configuração, mas isso é de menos importância. para isso se pode simplesmente ler o README.md e a help page</p>
     </main>
 </body>
