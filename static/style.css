@@ -29,6 +29,8 @@ main {
     grid-template-columns: 1fr 1fr;
 }
 
+
+
 #title {
     font-size: 6em;
     font-style: italic;
@@ -42,10 +44,20 @@ main {
     color: var(--fg);
 }
 
+#posts-box {
+    grid-area: posts;
+    /* min-width: 500px; */
+}
+
 @media screen and (max-width: 500px) {
     #title {
         font-size: 4em;
     }
+
+    #posts-box {
+        max-width: 500px;
+    }
+
     main {
         grid-template-areas: 
             "main"
@@ -104,10 +116,7 @@ body {
     grid-area: now;
 }
 
-#posts-box {
-    grid-area: posts;
-    min-width: 500px;
-}
+
 
 #main-box {
     grid-area: main;
