@@ -14,6 +14,49 @@
     --light: #999;
 }
 
+main {
+    max-width: 90%;
+    margin-bottom: 2rem;
+    display: grid;
+    gap: 30px;
+    grid-template-areas: 
+    "main links"
+    "main posts"
+    "now posts"
+    "now learn"
+    "about learn"
+    ;
+    grid-template-columns: 1fr 1fr;
+}
+
+#title {
+    font-size: 6em;
+    font-style: italic;
+    margin-bottom: 1rem;
+    transition: all 100ms;
+    text-align: left;
+}
+
+#title a {
+    text-decoration: none;
+    color: var(--fg);
+}
+
+@media screen and (max-width: 500px) {
+    #title {
+        font-size: 4em;
+    }
+    main {
+        grid-template-areas: 
+            "main"
+            "links"
+            "posts"
+            "now"
+            "learn"
+            "about";
+        grid-template-columns: 1fr;
+    }
+}
 
 @font-face {
     font-family: Terminus;
@@ -38,18 +81,7 @@ body {
     border: none;
 }
 
-main {
-    max-width: 90%;
-    margin-bottom: 2rem;
-    display: grid;
-    gap: 30px;
-    grid-template-areas: 
-    "main links"
-    "main posts"
-    "now posts"
-    "about empty"
-    ;
-}
+
 
 .post-main {
     position: relative;
@@ -64,23 +96,39 @@ main {
     margin-bottom: 2rem;
 }
 
+#links-box {
+    grid-area: links;
+}
+
+#now-box {
+    grid-area: now;
+}
+
+#posts-box {
+    grid-area: posts;
+    min-width: 500px;
+}
+
+#main-box {
+    grid-area: main;
+    max-width: 600px;
+}
+
+#about-box {
+    grid-area: about;
+}
+
+#learn-box {
+    grid-area: learn;
+}
+
+
 .date {
     font-style: italic;
     text-align: center;
 }
 
-#title {
-    font-size: 6em;
-    font-style: italic;
-    margin-bottom: 1rem;
-    transition: all 100ms;
-    text-align: left;
-}
 
-#title a {
-    text-decoration: none;
-    color: var(--fg);
-}
 
 #lambda {
     font-size: 0.9em;
@@ -118,28 +166,6 @@ header button:hover {
     border: 1px dashed var(--fg);
     padding: 20px;
     font-size: 1.3em;
-}
-
-#links-box {
-    grid-area: links;
-}
-
-#now-box {
-    grid-area: now;
-}
-
-#posts-box {
-    grid-area: posts;
-    min-width: 500px;
-}
-
-#main-box {
-    grid-area: main;
-    max-width: 600px;
-}
-
-#about-box {
-    grid-area: about;
 }
 
 .post-title,
