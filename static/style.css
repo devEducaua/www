@@ -4,6 +4,9 @@
     --orange: #d17e25;
     --light: #999;
     --sec: #222;
+    /* --default-border: 1px dashed var(--fg); */
+    --default-border: none;
+    /* --top-border: 1px dashed var(--fg); */
 }
 
 .light {
@@ -102,7 +105,8 @@ body {
     width: 600px;
     font-size: 1.3em;
     padding: 20px;
-    border: 1px dashed var(--fg);
+    /* border: 1px dashed var(--fg); */
+    border: var(--default-border)
     /* margin-bottom: 200px; */
 }
 
@@ -170,7 +174,9 @@ header button:hover {
 
 .box {
     position: relative;
-    border: 1px dashed var(--fg);
+    /* border: 1px dashed var(--fg); */
+    border: var(--default-border);
+    /* border-top: var(--top-border); */
     padding: 20px;
     font-size: 1.3em;
 }
