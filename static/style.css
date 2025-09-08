@@ -22,16 +22,14 @@ main {
     display: grid;
     gap: 30px;
     grid-template-areas: 
-    "main links"
-    "main posts"
-    "now posts"
-    "now learn"
-    "about learn"
+    "main now"
+    "about now"
+    "about posts"
+    "about links"
+    "learn links"
     ;
     grid-template-columns: 1fr 1fr;
 }
-
-
 
 #title {
     font-size: 6em;
@@ -151,7 +149,7 @@ header {
     /* background-color: aqua; */
     justify-content: center;
     align-items: center;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
 }
 
 header button {
