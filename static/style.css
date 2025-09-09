@@ -7,6 +7,7 @@
     /* --default-border: 1px dashed var(--fg); */
     --default-border: none;
     /* --top-border: 1px dashed var(--fg); */
+    --font-size: 1.3rem;
 }
 
 .light {
@@ -27,6 +28,35 @@ main {
     border: var(--default-border)
     /* margin-bottom: 200px; */
 }
+
+#side nav{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -8rem;
+    /* border-right: 1px solid var(--fg); */
+    gap: 10px;
+}
+
+#side button {
+    background: none;
+    border: none;
+    padding: 5px 20px;
+    font-size: var(--font-size);
+    color: var(--fg);
+}
+
+#side button a {
+    text-decoration: none;
+    font-style: normal;
+    color: var(--fg);
+}
+
+#side button:hover {
+    color: var(--orange);
+}
+
+
 
 #title {
     font-size: 6em;
@@ -98,11 +128,15 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 600px;
-    font-size: 1.3em;
+    font-size: var(--font-size);
     padding: 20px;
     /* border: 1px dashed var(--fg); */
     border: var(--default-border)
     /* margin-bottom: 200px; */
+}
+
+.post-main p {
+    margin-bottom: 20px;
 }
 
 #links-box {
@@ -147,32 +181,13 @@ header {
     align-items: center;
     margin-bottom: 2em;
 }
-
-header button {
-    background: none;
-    border: none;
-    padding: 5px 20px;
-    font-size: 1.2em;
-    color: var(--fg);
-}
-
-header button a {
-    text-decoration: none;
-    font-style: normal;
-    color: var(--fg);
-}
-
-header button:hover {
-    color: var(--orange);
-}
-
 .box {
     position: relative;
     /* border: 1px dashed var(--fg); */
     border: var(--default-border);
     /* border-top: var(--top-border); */
     padding: 20px;
-    font-size: 1.3em;
+    font-size: var(--font-size);
 }
 
 .post-title,

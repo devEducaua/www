@@ -3,13 +3,13 @@ const btn = document.getElementById('theme-toggle');
 
 function enable() {
     document.body.classList.add('light');
-    btn.textContent = "dark";
+    // btn.textContent = "dark";
     localStorage.setItem('light', 'true');
 }
 
 function disable() {
     document.body.classList.remove('light');
-    btn.textContent = "light";
+    // btn.textContent = "light";
     localStorage.setItem('light', 'false');
 }
 
