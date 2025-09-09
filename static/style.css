@@ -3,17 +3,17 @@
     --fg: #777777;
     --orange: #d17e25;
     --light: #999;
-    --sec: #222;
+    --sec: #111;
     /* --default-border: 1px dashed var(--fg); */
     --default-border: none;
     /* --top-border: 1px dashed var(--fg); */
-    --font-size: 1.3rem;
+    --font-size: 1.25rem;
 }
 
 .light {
     --bg: #fffcf3;
     --fg: #777777;
-    --sec: #dddddd;
+    --sec: #f4f1e9;
     --orange: #d17e25;
     --light: #999;
 }
@@ -207,10 +207,16 @@ header {
     white-space: nowrap;
 }
 
+h3::before {
+    content: "--";
+}
+h3::after {
+    content: "--";
+}
+
 code {
-    font-style: italic;
-    font-family: monospace;
-    font-size: 1.2em;
+    padding: 5px;
+    background-color: var(--sec);
 }
 
 b {
