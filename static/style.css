@@ -18,17 +18,14 @@
 }
 
 main {
-    max-width: 90%;
-    display: grid;
-    gap: 30px;
-    grid-template-areas: 
-    "main now"
-    "about now"
-    "about posts"
-    "about links"
-    "learn links"
-    ;
-    grid-template-columns: 1fr 1fr;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    padding: 20px;
+    border: var(--default-border)
+    /* margin-bottom: 200px; */
 }
 
 #title {
@@ -125,6 +122,7 @@ body {
 
 #about-box {
     grid-area: about;
+    margin-top: 20px;
 }
 
 #learn-box {
@@ -137,8 +135,6 @@ body {
     text-align: center;
 }
 
-
-
 #lambda {
     font-size: 0.9em;
 }
@@ -149,7 +145,7 @@ header {
     /* background-color: aqua; */
     justify-content: center;
     align-items: center;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
 }
 
 header button {
