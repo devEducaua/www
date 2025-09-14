@@ -207,10 +207,10 @@ header {
     white-space: nowrap;
 }
 
+h2::after,
+h2::before,
+h3::after,
 h3::before {
-    content: "--";
-}
-h3::after {
     content: "--";
 }
 
