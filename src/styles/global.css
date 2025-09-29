@@ -1,0 +1,285 @@
+:root {
+    --bg: #000000;
+    --fg: #777777;
+    --orange: #d17e25;
+    --light: #999;
+    --sec: #111;
+    /* --default-border: 1px dashed var(--fg); */
+    --default-border: none;
+    /* --top-border: 1px dashed var(--fg); */
+    --font-size: 1.25rem;
+}
+
+.light {
+    --bg: #fffcf3;
+    --fg: #777777;
+    --sec: #f4f1e9;
+    --orange: #d17e25;
+    --light: #999;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    padding: 20px;
+    border: var(--default-border)
+    /* margin-bottom: 200px; */
+}
+
+#side nav{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -8rem;
+    /* border-right: 1px solid var(--fg); */
+    gap: 10px;
+}
+
+#side button {
+    background: none;
+    border: none;
+    padding: 5px 20px;
+    font-size: var(--font-size);
+    color: var(--fg);
+}
+
+#side button a {
+    text-decoration: none;
+    font-style: normal;
+    color: var(--fg);
+}
+
+#side button:hover {
+    color: var(--orange);
+}
+
+
+
+#title {
+    font-size: 6em;
+    font-style: italic;
+    margin-bottom: 1rem;
+    transition: all 100ms;
+    text-align: left;
+}
+
+#title a {
+    text-decoration: none;
+    color: var(--fg);
+}
+
+#posts-box {
+    grid-area: posts;
+    /* min-width: 500px; */
+}
+
+@media screen and (max-width: 500px) {
+    #title {
+        font-size: 4em;
+    }
+
+    #posts-box {
+        max-width: 500px;
+    }
+
+    main {
+        grid-template-areas: 
+            "main"
+            "links"
+            "posts"
+            "now"
+            "learn"
+            "about";
+        grid-template-columns: 1fr;
+    }
+}
+
+@font-face {
+    font-family: Terminus;
+    src: url(../../public/fonts/TerminessNerdFontMono-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Terminus, monospace;
+}
+
+body {
+    margin-top: 5rem;
+    background-color: var(--bg);
+    color: var(--fg);
+    display: flex;
+    padding-bottom: 20px;
+    align-items: center;
+    /* height: 100vh; */
+    flex-direction: column;
+    border: none;
+}
+
+
+
+.post-main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    font-size: var(--font-size);
+    padding: 20px;
+    /* border: 1px dashed var(--fg); */
+    border: var(--default-border)
+    /* margin-bottom: 200px; */
+}
+
+.post-main p {
+    margin-bottom: 20px;
+}
+
+#links-box {
+    grid-area: links;
+}
+
+#now-box {
+    grid-area: now;
+}
+
+
+
+#main-box {
+    grid-area: main;
+    max-width: 600px;
+}
+
+#about-box {
+    grid-area: about;
+    margin-top: 20px;
+}
+
+#learn-box {
+    grid-area: learn;
+}
+
+
+.date {
+    font-style: italic;
+    text-align: center;
+}
+
+#lambda {
+    font-size: 0.9em;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+.box {
+    position: relative;
+    /* border: 1px dashed var(--fg); */
+    border: var(--default-border);
+    /* border-top: var(--top-border); */
+    padding: 20px;
+    font-size: var(--font-size);
+}
+
+.post-title,
+.box-title {
+    background-color: var(--bg);
+    position: absolute;    
+    top: -0.7em;
+    /* left: 1em; */
+    /* padding: 0 0.5em; */
+}
+
+.post-title {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+h2::after,
+h2::before,
+h3::after,
+h3::before {
+    content: "--";
+}
+
+pre {
+    padding: 0.5rem;
+    background-color: var(--sec);
+    overflow: auto;
+}
+
+code {
+    font-family: monospace;
+}
+
+strong {
+    color: var(--light);
+    font-weight: 500;
+}
+
+a {
+    color: var(--light);
+    font-style: italic;
+}
+
+li {
+    transition: all 0.2ms;
+    line-height: 1.2;
+}
+
+li::marker {
+    content: "- ";
+}
+
+ul {
+    list-style-position: inside;
+}
+
+#blog-list li {
+    list-style-type: none;
+    line-height: 1.5;
+}
+
+#blog-list li a {
+    font-style: normal;
+    text-decoration: none;
+}
+
+#blog-list li a:hover {
+    text-decoration: underline;
+}
+
+#blog-list span {
+    padding-right: 40px;
+}
+
+a:hover,
+li:has(a:hover) a,
+li:has(a:hover)::marker,
+li:hover,
+li:has(:hover) a,
+li:has(a:hover) span,
+body:has(#title:hover) a,
+body:has(#title:hover) #blog-title,
+body:has(#title:hover) b,
+.box:has(.box-title:hover) .box-title,
+header:has(#title:hover),
+header:has(#title:hover) span {
+    color: var(--orange);
+}
+
+.box:has(.box-title:hover) {
+    border-color: var(--orange);
+}
