@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+import Aside from "../components/Aside.astro";
+import Header from "../components/Header.astro";
+import Head from "../components/Head.astro";
+const posts = Object.values(import.meta.glob('./posts/*.md', { eager: true }))
+---
+
+<html>
+    <Head customTitle="lambda - posts"/>
+    <body>
+        <style>
+            p::before {
+                content: "$ ";
+            }
+        </style>
+
+        <Header/>
+
+        <main>
+            <Aside/>
+            <div id="posts-box" class="box">
+                <span class="box-title">writing</span>
+                <ul id="blog-list">
+                    {posts.map(post => <li> <span>{post.frontmatter.date}</span><a href={post.url}>{post.frontmatter.title}</a> </li>)}
+               </ul>
+            </div>
+        </main>
+    </body>
+</html>

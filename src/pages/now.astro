@@ -1,0 +1,64 @@
+---
+import "../styles/global.css";
+import Aside from "../components/Aside.astro";
+import Header from "../components/Header.astro";
+import Head from "../components/Head.astro";
+---
+
+<html>
+    <Head customTitle="lambda - now"/>
+    <body>
+        <style>
+            p::before {
+                content: "$ ";
+            }
+        </style>
+
+        <Header />
+
+        <main>
+            <Aside />
+
+            <div id="post-box" class="box">
+                <span class="box-title">now</span>
+                <p>eu estou a todo momento fazendo algo diferente, nunca parado.</p>
+                <p>aqui quero por essas coisas que faço.</p>
+
+                <br>
+                <p>lendo:</p>
+                <ul>
+                    <li><b>O Estranho Misterioso</b> de Mark Twain</li>
+                    <li><b>Yu Yu Hakusho</b> de Togashi, Yoshihiro</li>
+                    <li><b>Hellsing</b> de Hirano, Kouta</li>
+                </ul>
+
+                <br>
+
+                <p>jogando:</p>
+                <ul>
+                    <li><b>Super Mario Kart</b> - SNES</li>
+                </ul>
+                <br>
+
+                <p>aprendendo:</p>
+                <ul>
+                    <li>escrita: <a href="https://rmarkdown.rstudio.com/" target="_blank">R Markdown</a>, <a href="https://www.latex-project.org/" target="_blank">LaTeX</a>.</li>
+                    <li>programação: websockets, c, deno e muito mais.</li>
+                    <li>protocolos: <a href="geminiprotocol.net" target="_blank">Gemini</a> e <a href="https://en.wikipedia.org/wiki/Gopher_(protocol)#External_links" target="_blank">Gopher</a>.</li>
+                    <li>outros: LFS, xadrez.</li>
+                </ul>
+
+                <br>
+                <p>este é meu atual setup:</p>
+                <ul>
+                    <li>distro: arch</li>
+                    <li>wm: bspwm</li>
+                    <li>compositor: xcompmgr</li>
+                    <li>terminal: ghostty</li>
+                    <li>code: nvim</li>
+                    <li>multiplexer: tmux</li>
+                </ul>
+            </div>
+        </main>
+    </body>
+</html>

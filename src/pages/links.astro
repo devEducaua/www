@@ -1,0 +1,52 @@
+---
+import Aside from "../components/Aside.astro";
+import Header from "../components/Header.astro";
+import Head from "../components/Head.astro";
+import "../styles/global.css";
+---
+
+<html>
+    <Head customTitle="lambda - links"/>
+    <body>
+        <style>
+            p::before {
+                content: "$ ";
+            }
+        </style>
+
+        <Header />
+
+        <main>
+            <Aside />
+
+            <div id="post-box" class="box">
+                <span class="box-title">links</span>
+                <p>aqui estão alguns do meus links: </p>
+                <br>
+                <ul>
+                    <p>code:</p>
+                    <li>
+                        <span>Github:</span> <a href="https://github.com/devEducaua" target="_blank">link</a>
+                    </li>
+                    <li>
+                        <span>Codeberg:</span> <a href="https://codeberg.org/eduardocaua" target="_blank">link</a>
+                    </li>
+                    <br>
+                </ul>
+
+                <ul>
+                    <p>media:</p>
+                    <li>
+                        <span>Letterboxd:</span> <a href="https://letterboxd.com/induardo" target="_blank">link</a>
+                    </li>
+                    <li>
+                        <span>LastFM:</span> <a href="https://last.fm/user/chokito4" target="_blank">link</a>
+                    </li>
+                    <li>
+                        <span>Myanimelist:</span> <a href="https://myanimelist.net/profile/chokito4" target="_blank">link</a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </body>
+</html>

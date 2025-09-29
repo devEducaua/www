@@ -1,0 +1,34 @@
+---
+import Aside from "../components/Aside.astro";
+import Header from "../components/Header.astro";
+import Head from "../components/Head.astro";
+import "../styles/global.css";
+---
+
+<html>
+    <Head />
+    <body>
+        <style>
+            p::before {
+                content: "$ ";
+            }
+        </style>
+
+        <Header/>
+
+        <main>
+            <Aside/>
+            <div id="main-box" class="box">
+                <span class="box-title">main</span>
+                <p>este aqui é o meu site pessoal.</p> <br>
+
+                <p>aqui quero fazer alguns posts, colocar links uteis, ensinar coisas e por aí vai.</p>
+
+                <br>
+
+                <p>eu gosto muito de aprender e criar coisas. Muito disso vêm das filosofias <a href="https://wikipedia.org/wiki/KISS_principle" target="_blank">KISS</a> & <a href="https://wikipedia.org/wiki/Do_it_yourself" target="_blank">DIY</a>.</p><br>
+                <p>estudo constantemente ciência da computação, linguística, filosofia, e entre muitos outras coisas também.</p> <br>
+            </div>
+        </main>
+    </body>
+    </html>

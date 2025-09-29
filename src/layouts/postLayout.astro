@@ -1,0 +1,21 @@
+---
+import "../styles/global.css";
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
+import Aside from "../components/Aside.astro";
+const { frontmatter } = Astro.props;
+---
+
+<html>
+    <Head customTitle={`Lambda - ${frontmatter.title}`}/>
+    <body>
+        <Header/>
+        <main class="post-main">
+            <Aside/>
+            <span class="post-title">{frontmatter.title}</span>
+            <p class="date">{frontmatter.date}</p>
+            <slot/>
+        </main>
+        <br>
+    </body>
+</html>
