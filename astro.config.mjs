@@ -5,7 +5,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
     site: "https://deveducaua.github.io/www",
     outDir: "docs",
-    base: "/",
+    base: "/www",
 
     build: {
         pageUrlFormat: "directory",
