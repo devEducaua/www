@@ -6,6 +6,26 @@ import Head from "../components/Head.astro";
 const posts = Object.values(import.meta.glob('./posts/*.md', { eager: true }))
 ---
 
+<style>
+    #posts-list li {
+        list-style-type: none;
+        line-height: 1.5;
+    }
+
+    #posts-list li a {
+        font-style: normal;
+        text-decoration: none;
+    }
+
+    #posts-list li a:hover {
+        text-decoration: underline;
+    }
+
+    #posts-list span {
+        padding-right: 40px;
+    }
+</style>
+
 <html>
     <Head customTitle="lambda - posts"/>
     <body>
@@ -21,7 +41,7 @@ const posts = Object.values(import.meta.glob('./posts/*.md', { eager: true }))
             <Aside/>
             <div id="posts-box" class="box">
                 <span class="box-title">writing</span>
-                <ul id="blog-list">
+                <ul id="posts-list">
                     {posts.map(post => <li> <span>{post.frontmatter.date}</span><a href={post.url}>{post.frontmatter.title}</a> </li>)}
                </ul>
             </div>

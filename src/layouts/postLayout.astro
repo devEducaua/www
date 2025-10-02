@@ -6,6 +6,13 @@ import Aside from "../components/Aside.astro";
 const { frontmatter } = Astro.props;
 ---
 
+<style>
+    .date {
+        font-style: italic;
+        text-align: center;
+    }
+</style>
+
 <html>
     <Head customTitle={`Lambda - ${frontmatter.title}`}/>
     <body>

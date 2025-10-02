@@ -1,6 +1,37 @@
+---
+import ButtonSidebar from "./ButtonSidebar.astro";
+---
+
+<style>
+    #title {
+        font-size: 6em;
+        font-style: italic;
+        margin-bottom: 1rem;
+        transition: all 100ms;
+        text-align: left;
+    }
+
+    #title a {
+        text-decoration: none;
+        color: var(--fg);
+    }
+
+    #lambda {
+        font-size: 0.9em;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+</style>
+
 <header>
     <h1 id="title">
         <span id="lambda">󰘧</span> 
-        <a href="/index.html">lambda</a>
+        <a href="./index.html">lambda</a>
     </h1>
 </header>

@@ -3,19 +3,13 @@
     --fg: #777777;
     --orange: #d17e25;
     --light: #999;
-    --sec: #111;
-    /* --default-border: 1px dashed var(--fg); */
-    --default-border: none;
-    /* --top-border: 1px dashed var(--fg); */
+    --sec: #111111;
     --font-size: 1.25rem;
 }
 
 .light {
     --bg: #fffcf3;
-    --fg: #777777;
     --sec: #f4f1e9;
-    --orange: #d17e25;
-    --light: #999;
 }
 
 main {
@@ -25,75 +19,12 @@ main {
     justify-content: center;
     width: 600px;
     padding: 20px;
-    border: var(--default-border)
-    /* margin-bottom: 200px; */
-}
-
-#side nav{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: -8rem;
-    /* border-right: 1px solid var(--fg); */
-    gap: 10px;
-}
-
-#side button {
-    background: none;
     border: none;
-    padding: 5px 20px;
-    font-size: var(--font-size);
-    color: var(--fg);
 }
 
-#side button a {
-    text-decoration: none;
-    font-style: normal;
-    color: var(--fg);
-}
-
-#side button:hover {
-    color: var(--orange);
-}
-
-
-
-#title {
-    font-size: 6em;
-    font-style: italic;
-    margin-bottom: 1rem;
-    transition: all 100ms;
-    text-align: left;
-}
-
-#title a {
-    text-decoration: none;
-    color: var(--fg);
-}
-
-#posts-box {
-    grid-area: posts;
-    /* min-width: 500px; */
-}
-
-@media screen and (max-width: 500px) {
-    #title {
-        font-size: 4em;
-    }
-
-    #posts-box {
-        max-width: 500px;
-    }
-
+@media screen and (max-width: 600px) {
     main {
-        grid-template-areas: 
-            "main"
-            "links"
-            "posts"
-            "now"
-            "learn"
-            "about";
-        grid-template-columns: 1fr;
+        width: 400px; 
     }
 }
 
@@ -115,88 +46,23 @@ body {
     display: flex;
     padding-bottom: 20px;
     align-items: center;
-    /* height: 100vh; */
     flex-direction: column;
     border: none;
 }
 
-
-
 .post-main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 600px;
     font-size: var(--font-size);
-    padding: 20px;
-    /* border: 1px dashed var(--fg); */
-    border: var(--default-border)
-    /* margin-bottom: 200px; */
 }
 
 .post-main p {
     margin-bottom: 20px;
 }
 
-#links-box {
-    grid-area: links;
-}
-
-#now-box {
-    grid-area: now;
-}
-
-
-
-#main-box {
-    grid-area: main;
-    max-width: 600px;
-}
-
-#about-box {
-    grid-area: about;
-    margin-top: 20px;
-}
-
-#learn-box {
-    grid-area: learn;
-}
-
-
-.date {
-    font-style: italic;
-    text-align: center;
-}
-
-#lambda {
-    font-size: 0.9em;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    /* background-color: aqua; */
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2em;
-}
-.box {
-    position: relative;
-    /* border: 1px dashed var(--fg); */
-    border: var(--default-border);
-    /* border-top: var(--top-border); */
-    padding: 20px;
-    font-size: var(--font-size);
-}
-
 .post-title,
 .box-title {
     background-color: var(--bg);
-    position: absolute;    
+    position: absolute;
     top: -0.7em;
-    /* left: 1em; */
-    /* padding: 0 0.5em; */
 }
 
 .post-title {
@@ -205,6 +71,13 @@ header {
     font-size: 1.5em;
     font-weight: bold;
     white-space: nowrap;
+}
+
+.box {
+    padding: 20px;
+    position: relative;
+    border: none;
+    font-size: var(--font-size);
 }
 
 h2::after,
@@ -245,24 +118,6 @@ li::marker {
 
 ul {
     list-style-position: inside;
-}
-
-#blog-list li {
-    list-style-type: none;
-    line-height: 1.5;
-}
-
-#blog-list li a {
-    font-style: normal;
-    text-decoration: none;
-}
-
-#blog-list li a:hover {
-    text-decoration: underline;
-}
-
-#blog-list span {
-    padding-right: 40px;
 }
 
 a:hover,
