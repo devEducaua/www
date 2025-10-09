@@ -121,6 +121,7 @@ ul {
 }
 
 a:hover,
+.box-title:hover,
 li:has(a:hover) a,
 li:has(a:hover)::marker,
 li:hover,
@@ -129,13 +130,12 @@ li:has(a:hover) span,
 body:has(#title:hover) a,
 body:has(#title:hover) #blog-title,
 body:has(#title:hover) b,
-.box:has(.box-title:hover) .box-title,
+body:has(#title:hover) #side button,
+body:has(#title:hover) #side button a,
+body:has(#title:hover) .box-title,
+body:has(#title:hover) #post-title,
 header:has(#title:hover) #title a,
 header:has(#title:hover),
 header:has(#title:hover) span {
     color: var(--orange);
-}
-
-.box:has(.box-title:hover) {
-    border-color: var(--orange);
 }
