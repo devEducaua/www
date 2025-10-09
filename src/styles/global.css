@@ -130,6 +130,7 @@ body:has(#title:hover) a,
 body:has(#title:hover) #blog-title,
 body:has(#title:hover) b,
 .box:has(.box-title:hover) .box-title,
+header:has(#title:hover) #title a,
 header:has(#title:hover),
 header:has(#title:hover) span {
     color: var(--orange);
