@@ -29,8 +29,8 @@ main {
 }
 
 @font-face {
-    font-family: Terminus;
-    src: url(./fonts/TerminessNerdFontMono-Regular.ttf);
+    font-family: Terminus, 'Courier New', Courier, monospace;
+    src: url(./fonts/TerminessNerdFontMono-Regular.woff2) format("woff2");
 }
 
 * {
