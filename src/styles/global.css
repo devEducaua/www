@@ -7,9 +7,24 @@
     --font-size: 1.25rem;
 }
 
-.light {
+/* .light { */
+/*     --bg: #fffcf3; */
+/*     --sec: #f4f1e9; */
+/* } */
+
+body:has(#dark:checked) {
     --bg: #fffcf3;
     --sec: #f4f1e9;
+}
+
+#dark {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#dark-label {
+    cursor: pointer;
 }
 
 main {

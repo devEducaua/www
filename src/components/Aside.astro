@@ -49,32 +49,13 @@
         <button><a href="./links/">links</a></button>
         <button><a href="./now/">now</a></button>
         <button><a href="./almanac/">almanac</a></button>
-        <button id="theme-toggle">theme</button>
+        <button>
+            <label id="dark-label">
+                <input id="dark" type="checkbox">
+                theme
+            </label>
+        </button>
         <button><a href="./rss.xml">feed</a></button>
         <button><a href="https://github.com/devEducaua/www/tree/gh-pages" target="_blank">source</a></button>
     </nav>
 </aside>
-
-<script is:inline>
-    let light = localStorage.getItem('light');
-    const btn = document.getElementById('theme-toggle');
-
-    function enable() {
-        document.body.classList.add('light');
-        // btn.textContent = "dark";
-        localStorage.setItem('light', 'true');
-    }
-
-    function disable() {
-        document.body.classList.remove('light');
-        // btn.textContent = "light";
-        localStorage.setItem('light', 'false');
-    }
-
-    if (light === 'true') enable();
-
-    btn.addEventListener("click", () => {
-        light = localStorage.getItem('light');
-        light != "true" ? enable() : disable();
-    })
-</script>
